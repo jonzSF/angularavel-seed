@@ -13,32 +13,40 @@
 <!--<![endif]-->
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mach's cooler: beim verrückten Früchtchen-Kühlen!</title>
 
-  <meta property="og:url" content="<?php echo $appUrl ?>"/>
-  <meta property="og:title" content="<?php echo $ogTitle ?>"/>
-  <meta property="og:description" content="<?php echo $ogDesc ?>"/>
-  <meta property="og:image" content="<?php echo $appUrl . '/assets/icons/icon_128x128.png' ?>"/>
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="css/app.css"/>
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content='J. Hausig @ Scholz & Friends'>
+
+    <meta property="og:url" content=""/>
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:image" content=""/>
+
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="css/app.css"/>
+
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 <ul class="menu">
-  <li><a href="#/view1">view1</a></li>
-  <li><a href="#/view2">view2</a></li>
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
 </ul>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">
-  You are using an <strong>outdated</strong> browser. Please
-  <a href="http://browsehappy.com/">upgrade your browser</a>
-  to improve your experience.</p>
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="http://browsehappy.com/">upgrade your browser</a>
+    to improve your experience.</p>
 <![endif]-->
 
 <div ng-view></div>
@@ -50,11 +58,11 @@
 -->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
-<script src="js/app.js"></script>
-<script src="js/services.js"></script>
-<script src="js/controllers.js"></script>
-<script src="js/filters.js"></script>
-<script src="js/directives.js"></script>
+<script src="app/App.js"></script>
+<script src="app/controllers/controllers.js"></script>
+<script src="app/utils/services/services.js"></script>
+<script src="app/utils/filters/filters.js"></script>
+<script src="app/utils/directives/directives.js"></script>
 
 </body>
 </html>

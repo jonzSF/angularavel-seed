@@ -4,7 +4,7 @@ class AppController extends BaseController {
 
 	public function init()
 	{
-		return View::make('indexes.index');
+		return View::make('index');
 	}
 
 }
