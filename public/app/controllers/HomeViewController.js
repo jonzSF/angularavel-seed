@@ -2,8 +2,7 @@
 
 /* Controllers */
 
-angular.module('app.controllers', [])
+app.lazy.controller('HomeViewController', function ($scope) {
+    console.log('Home -> View');
+})
 
-  .controller('HomeViewController', function ($scope) {
-    console.log('Home');
-  })

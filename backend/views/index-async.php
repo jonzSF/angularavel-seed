@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="css/styles.css"/>
   <style>
     [ng-cloak] {
       display: none;

@@ -3,44 +3,58 @@
 var defaultDependencies = [];
 
 var app = angular.module('app', [
-  'ngRoute',
-  'app.filters',
-  'app.services',
-  'app.directives',
+    'ngRoute',
+    'app.filters',
+    'app.services',
+    'app.directives',
 ]);
 
-app.loadDependencies = function(deferred, dependencies){
+app.config(function ($routeProvider, $controllerProvider, $compileProvider, $filterProvider, $animateProvider, $provide) {
 
-  $script(dependencies, function () {
-    // all dependencies have now been loaded by $script.js so resolve the promise
-    $rootScope.$apply(function () {
-      deferred.resolve();
-    });
-  });
+    app.lazy = {
+        controller: $controllerProvider.register,
+        directive: $compileProvider.directive,
+        filter: $filterProvider.register,
+        factory: $provide.factory,
+        service: $provide.service,
+        animation: $animateProvider.register
+    };
 
-  return deferred.promise;
-}
+    // Register routes with the $routeProvider
+    $routeProvider.when('/', {templateUrl: 'views/home.html', resolve: {load: function ($q, $rootScope) {
 
-app.config(function ($routeProvider, $controllerProvider, $compileProvider, $filterProvider, $provide) {
+        var dependencies = [
+            'app/controllers/HomeViewController.js'
+        ];
 
-  app.controllerProvider = $controllerProvider;
-  app.compileProvider = $compileProvider;
-  app.routeProvider = $routeProvider;
-  app.filterProvider = $filterProvider;
-  app.provide = $provide;
+        var deferred = $q.defer();
 
-  // Register routes with the $routeProvider
-  $routeProvider.when('/', {templateUrl: 'views/home.html'});
+        $script(dependencies, function () {
+            $rootScope.$apply(function () {
+                deferred.resolve();
+            });
+        });
 
-  $routeProvider.when('/about', {templateUrl: 'views/about.html', resolve: {deps: function ($q, $rootScope) {
-    var dependencies =
-      [
-        'controllers/AboutViewController.js',
-        'directives/some-directive.js'
-      ];
+        return deferred.promise;
+    }}});
 
-    return app.loadDependencies($q.defer(), dependencies);
-  }}});
+    $routeProvider.when('/about', {templateUrl: 'views/about.html', resolve: {deps: function ($q, $rootScope) {
+
+        var dependencies = [
+            'app/controllers/AboutViewController.js'
+        ];
+
+        var deferred = $q.defer();
+
+        $script(dependencies, function () {
+            $rootScope.$apply(function () {
+                deferred.resolve();
+            });
+        });
+
+        return deferred.promise;
+
+    }}});
 
 });
 

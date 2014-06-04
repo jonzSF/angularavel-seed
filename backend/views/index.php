@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>
-<html lang="en" ng-app="App" class="no-js lt-ie9 lt-ie8 lt-ie7">
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7">
 <![endif]-->
 <!--[if IE 7]>
-<html lang="en" ng-app="App" class="no-js lt-ie9 lt-ie8">
+<html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8">
 <![endif]-->
 <!--[if IE 8]>
-<html lang="en" ng-app="App" class="no-js lt-ie9">
+<html lang="en" ng-app="app" class="no-js lt-ie9">
 <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="en" ng-app="App" class="no-js">
+<html lang="en" ng-app="app" class="no-js">
 <!--<![endif]-->
 
 <head>
@@ -30,17 +30,13 @@
     <meta property="og:description" content=""/>
     <meta property="og:image" content=""/>
 
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="css/styles.min.css"/>
 
-    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-<ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-</ul>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">
@@ -49,17 +45,24 @@
     to improve your experience.</p>
 <![endif]-->
 
-<div ng-view></div>
+<ul class="menu">
+    <li><a href="#/">Home</a></li>
+    <li><a href="#/about">About</a></li>
+</ul>
 
-<div>Angular seed app: v<span app-version></span></div>
+<div ng-view></div>
+<div>Angularavel seed app: v<span app-version></span></div>
 
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="app/App.js"></script>
-<script src="app/controllers/controllers.js"></script>
+<script src="components/angular/angular.js"></script>
+<script src="components/angular-route/angular-route.js"></script>
+<script src="components/angular-animate/angular-animate.js"></script>
+
+<script src="js/script.min.js"></script>
+
+<script src="app/app.js"></script>
 <script src="app/utils/services/services.js"></script>
 <script src="app/utils/filters/filters.js"></script>
 <script src="app/utils/directives/directives.js"></script>

@@ -1,0 +1,44 @@
+// Convert PX to EM global function
+@function pxtoem($px, $basepx: 16px) {
+  @return ($px/$basepx)+0em;
+}
+
+@mixin absolute($top: 0, $left: 0, $bottom: 0, $right: 0) {
+  position: absolute;
+  left: $left;
+  right: $right;
+  top: $top;
+  bottom: $bottom;
+}
+
+@mixin centered-horizontal() {
+  margin: 0 auto;
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: "") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin bg-alpha($color, $background) {
+  $percent: alpha($color) * 100%;
+  $opaque: opacify($color, 1);
+  $solid-color: mix($opaque, $background, $percent);
+  background-color: $solid-color;
+  background-color: $color;
+}
+
+@mixin opacity($value) {
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  -moz-opacity: $value;
+  -khtml-opacity: $value;
+  filter: alpha(opacity=$IEValue);
+}
+
+@mixin input-shadow() {
+  //box-shadow:pxtoem(1px) pxtoem(1px) pxtoem(6px)rgba(0,0,0,0.2);
+  @include box-shadow(pxtoem(1px), pxtoem(1px), pxtoem(6px), pxtoem(3px), rgba(0, 0, 0, 0.2), inset)
+}

@@ -2,8 +2,6 @@
 
 /* Controllers */
 
-angular.module('app.controllers', [])
-
-  .controller('AboutViewController', function ($scope) {
-    console.log('About');
-  })
+app.lazy.controller('AboutViewController', function ($scope) {
+    console.log('About -> View');
+})
