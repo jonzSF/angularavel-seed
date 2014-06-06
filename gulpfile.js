@@ -9,10 +9,10 @@ var gulp = require('gulp'),
     lr = require('tiny-lr'),
     server = lr();
 
-var sassDir = 'public/css/scss';
-var cssDir = 'public/css';
-var jsDir = 'public/js';
-var imageDir = 'public/img';
+var sassDir = 'public/assets/css/scss';
+var cssDir = 'public/assets/css';
+var jsDir = 'public/assets/js';
+var imageDir = 'public/assets/img';
 
 /* ###### TASKS ####### */
 
@@ -28,9 +28,9 @@ gulp.task('styles', function () {
         .pipe(notify({ message: 'Styles task complete' }));
 });
 
-gulp.task('components', function () {
+gulp.task('move', function () {
     return gulp.src('bower_components/**/')
-        .pipe(gulp.dest('public/components'));
+        .pipe(gulp.dest('public/assets/components'));
 });
 
 gulp.task('watch', function () {

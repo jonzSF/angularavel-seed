@@ -13,7 +13,7 @@
 <!--<![endif]-->
 
 <head>
-    <title>Mach's cooler: beim verrückten Früchtchen-Kühlen!</title>
+    <title>Angularavel Seed</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome1">
@@ -30,11 +30,11 @@
     <meta property="og:description" content=""/>
     <meta property="og:image" content=""/>
 
-    <link rel="stylesheet" href="components/html5-boilerplate/css/normalize.css">
-    <link rel="stylesheet" href="components/html5-boilerplate/css/main.css">
-    <link rel="stylesheet" href="css/styles.min.css"/>
+    <link rel="stylesheet" href="assets/components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="assets/components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css"/>
 
-    <script src="components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="assets/components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
 
@@ -56,11 +56,11 @@
 <!-- In production use:
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
-<script src="components/angular/angular.js"></script>
-<script src="components/angular-route/angular-route.js"></script>
-<script src="components/angular-animate/angular-animate.js"></script>
+<script src="assets/components/angular/angular.js"></script>
+<script src="assets/components/angular-route/angular-route.js"></script>
+<script src="assets/components/angular-animate/angular-animate.js"></script>
 
-<script src="js/script.min.js"></script>
+<script src="assets/js/script.min.js"></script>
 
 <script src="app/app.js"></script>
 <script src="app/utils/services/services.js"></script>

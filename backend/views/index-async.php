@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="assets/components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="assets/components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="assets/css/styles.css"/>
   <style>
     [ng-cloak] {
       display: none;
     }
   </style>
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="assets/components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
   <script>
     // include angular loader, which allows the files to load in any order
     //@@NG_LOADER_START@@
@@ -29,13 +29,13 @@
 
     // load all of the dependencies asynchronously.
     $script([
-      'bower_components/angular/angular.js',
-      'bower_components/angular-route/angular-route.js',
-      'js/app.js',
-      'js/services.js',
-      'js/controllers.js',
-      'js/filters.js',
-      'js/directives.js'
+      'assets/components/angular/angular.js',
+      'assets/components/angular-route/angular-route.js',
+      'app/app.js',
+      'app/services.js',
+      'app/controllers.js',
+      'app/filters.js',
+      'app/directives.js'
     ], function() {
       // when all is done, execute bootstrap angular application
       angular.bootstrap(document, ['myApp']);
